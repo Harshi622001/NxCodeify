@@ -7,8 +7,14 @@
       name="description"
       content="Nxcodify — complete web & app development solutions. From idea to deployment and long-term support."
     />
-    <meta name="theme-color" content="#0b1220" />
+    <meta name="theme-color" content="#ffffff" />
     <title>Nxcodify — Where Ideas Go Live</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preload" href="./assets/logo.png" as="image" />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="icon" href="./assets/logo.png" />
@@ -21,7 +27,7 @@
         <a class="brand" href="#home" aria-label="Nxcodify home">
           <img class="brand__logo" src="./assets/logo.png" alt="Nxcodify logo" />
           <span class="brand__text">
-            <span class="brand__name">Nxcodify</span>
+            <span class="brand__name"><span class="brand__nx">Nx</span><span class="brand__rest">codeify</span></span>
             <span class="brand__tagline">Where Ideas Go Live</span>
           </span>
         </a>
@@ -42,17 +48,34 @@
     </header>
 
     <main id="main">
-      <section id="home" class="hero section">
-        <div class="container hero__grid">
-          <div class="hero__copy">
-            <p class="pill">Complete Web &amp; App Development Solutions</p>
-            <h1 class="h1">
-              Turn your idea into a fully live product with <span class="grad">Nxcodify</span>
-              <span aria-hidden="true">💡</span>
-            </h1>
-            <p class="lead">
-              From logo design to deployment — we handle everything end-to-end. We build with
-              <strong>AI</strong> when it genuinely improves your product — recommendations, automation, and smarter workflows.
+      <section id="home" class="hero section hero--brand">
+        <div class="hero__blobs" aria-hidden="true">
+          <span class="hero__blob hero__blob--a"></span>
+          <span class="hero__blob hero__blob--b"></span>
+          <span class="hero__blob hero__blob--c"></span>
+        </div>
+        <div class="container hero__inner">
+          <div class="hero__copy hero__copy--center">
+            <div class="hero__brand">
+              <img
+                class="hero__logo"
+                src="./assets/logo.png"
+                width="220"
+                height="220"
+                alt="Nxcodify — circular emblem with tech stack icons"
+              />
+              <p class="hero__title wordmark" aria-label="Nxcodify">
+                <span class="brand__nx">Nx</span><span class="brand__rest">codeify</span>
+              </p>
+              <p class="hero__tagline">Where Ideas Go Live</p>
+            </div>
+
+            <h1 class="h1 hero__headline">Complete Web &amp; App Development Solutions</h1>
+            <p class="lead hero__lead">
+              Turn your idea into a fully live product with
+              <span class="hero__brand-inline" aria-label="Nxcodify"
+                ><span class="brand__nx">Nx</span><span class="brand__rest">codeify</span></span
+              >. From logo design to deployment — we handle everything end-to-end.
             </p>
 
             <div class="hero__cta">
@@ -67,34 +90,6 @@
               <span class="chip">UI/UX Design</span>
               <span class="chip">AI-Ready Builds</span>
             </div>
-          </div>
-
-          <div class="hero__visual" aria-hidden="true">
-            <div class="glass-card">
-              <div class="glass-card__top">
-                <div class="dot dot--r"></div>
-                <div class="dot dot--y"></div>
-                <div class="dot dot--g"></div>
-                <div class="spacer"></div>
-                <span class="mini">launch-ready</span>
-              </div>
-              <div class="glass-card__body">
-                <div class="metric">
-                  <div class="metric__kpi">10x</div>
-                  <div class="metric__label">scalable architecture</div>
-                </div>
-                <div class="metric">
-                  <div class="metric__kpi">7–21d</div>
-                  <div class="metric__label">fast MVP delivery</div>
-                </div>
-                <div class="metric">
-                  <div class="metric__kpi">99.9%</div>
-                  <div class="metric__label">uptime-first infra</div>
-                </div>
-              </div>
-            </div>
-            <div class="orb orb--1"></div>
-            <div class="orb orb--2"></div>
           </div>
         </div>
       </section>
@@ -132,9 +127,14 @@
                 scalable foundations that won’t collapse when you grow.
               </p>
               <div class="card__meta">
+                <span class="badge">Java</span>
+                <span class="badge">Spring Boot</span>
+                <span class="badge">Python</span>
                 <span class="badge">React</span>
-                <span class="badge">Node</span>
-                <span class="badge">Java/Python</span>
+                <span class="badge">Expo</span>
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JS</span>
               </div>
             </article>
 
@@ -206,6 +206,7 @@
                 <span class="badge">Closed testing</span>
                 <span class="badge">Open testing</span>
                 <span class="badge">Play Store launch</span>
+                <span class="badge">App Store launch</span>
               </div>
             </article>
           </div>
@@ -217,265 +218,214 @@
           <div class="section__head">
             <p class="kicker">Portfolio</p>
             <h2 class="h2">Featured Work</h2>
-            <p class="muted">
-              Real products shipped — from idea to production, we own the full journey.
-              <strong>We work with AI</strong> for search, recommendations, and automation when it fits your roadmap.
-            </p>
+            <p class="muted">Real products shipped — from idea to production, we own the full journey.</p>
           </div>
 
           <div class="work-grid">
-            <article class="work-card" data-work-card data-project="tooltian" tabindex="0" role="button" aria-label="Open Tooltian details">
-              <div class="work-card__top">
-                <span class="badge badge--pill">E-Commerce + AI</span>
-                <div class="work-card__title">
-                  <h3 class="h3">Tooltian</h3>
-                  <p class="muted">Mobile App + Web Platform</p>
+            <article
+              class="work-card work-card--tooltian"
+              data-work-card
+              data-project="tooltian"
+              tabindex="0"
+              role="button"
+              aria-label="Open Tooltian details"
+            >
+              <div class="work-card__banner">
+                <div class="work-card__banner-text">
+                  <span class="work-card__cat">E-Commerce + AI</span>
+                  <h3 class="work-card__name">Tooltian</h3>
+                  <p class="work-card__sub">Mobile App + Web Platform</p>
+                </div>
+                <div class="work-card__banner-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6 6h15l-1.5 9h-12L6 6zm0 0L5 3H2"
+                      stroke="currentColor"
+                      stroke-width="1.75"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <circle cx="9" cy="20" r="1" fill="currentColor" />
+                    <circle cx="18" cy="20" r="1" fill="currentColor" />
+                  </svg>
                 </div>
               </div>
-              <p class="work-card__desc">
-                E-commerce app + website with smart product suggestions, WhatsApp ordering, and location-based delivery.
-              </p>
-              <div class="stack" aria-label="Tech stack">
-                <span class="tag">Python</span>
-                <span class="tag">React</span>
-                <span class="tag">Expo</span>
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">WhatsApp</span>
-                <span class="tag">Maps</span>
-              </div>
-
-              <div class="work-card__preview" aria-hidden="true">
-                <div class="mock mock--phone">
-                  <div class="mock__screen">
-                    <div class="mock__bar"></div>
-                    <div class="mock__content">
-                      <div class="ui ui--phone">
-                        <div class="ui-top">
-                          <div class="ui-pill"></div>
-                          <div class="ui-chip"></div>
-                        </div>
-                        <div class="ui-cards">
-                          <div class="ui-card"></div>
-                          <div class="ui-card"></div>
-                          <div class="ui-card"></div>
-                        </div>
-                        <div class="ui-cta"></div>
-                      </div>
-                    </div>
-                  </div>
+              <div class="work-card__body">
+                <p class="work-card__desc">
+                  AI-powered e-commerce platform with WhatsApp ordering and location mapping.
+                </p>
+                <div class="stack work-card__stack" aria-label="Tech stack">
+                  <span class="tag">Java</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">React</span>
+                  <span class="tag">Expo</span>
+                  <span class="tag">Node.js</span>
+                  <span class="tag">AWS</span>
+                  <span class="tag">WhatsApp API</span>
+                  <span class="tag">Maps API</span>
                 </div>
-                <div class="mock mock--web">
-                  <div class="mock__screen">
-                    <div class="mock__bar"></div>
-                    <div class="mock__content">
-                      <div class="ui ui--web">
-                        <div class="ui-hero"></div>
-                        <div class="ui-row">
-                          <div class="ui-stat"></div>
-                          <div class="ui-stat"></div>
-                          <div class="ui-stat"></div>
-                        </div>
-                        <div class="ui-grid">
-                          <div class="ui-tile"></div>
-                          <div class="ui-tile"></div>
-                          <div class="ui-tile"></div>
-                          <div class="ui-tile"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="work-card__platforms" aria-label="Platforms">
+                  <span class="platform-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <rect x="7" y="2" width="10" height="20" rx="2" stroke="currentColor" stroke-width="1.5" />
+                      <circle cx="12" cy="18" r="1" fill="currentColor" />
+                    </svg>
+                    Android (Play Store)
+                  </span>
+                  <span class="platform-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" />
+                      <path d="M2 12h20" stroke="currentColor" stroke-width="1.5" />
+                    </svg>
+                    Web
+                  </span>
                 </div>
-              </div>
-
-              <div class="work-card__actions">
-                <button class="btn btn--sm btn--ghost" type="button" data-open-details>View Full Details</button>
-                <span class="muted hint">Click to expand</span>
+                <div class="work-card__actions">
+                  <button class="work-card__details" type="button" data-open-details>
+                    <span>View Full Details</span>
+                    <svg class="work-card__chev" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </article>
 
-            <article class="work-card" data-work-card data-project="learnhub" tabindex="0" role="button" aria-label="Open LearnHub details">
-              <div class="work-card__top">
-                <span class="badge badge--pill">EdTech + AI</span>
-                <div class="work-card__title">
-                  <h3 class="h3">LearnHub</h3>
-                  <p class="muted">Web learning platform</p>
+            <article
+              class="work-card work-card--learnhub"
+              data-work-card
+              data-project="learnhub"
+              tabindex="0"
+              role="button"
+              aria-label="Open LearnHub details"
+            >
+              <div class="work-card__banner">
+                <div class="work-card__banner-text">
+                  <span class="work-card__cat">EdTech</span>
+                  <h3 class="work-card__name">LearnHub</h3>
+                  <p class="work-card__sub">Web Platform</p>
+                </div>
+                <div class="work-card__banner-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M4 19.5A2.5 2.5 0 016.5 17H20"
+                      stroke="currentColor"
+                      stroke-width="1.75"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"
+                      stroke="currentColor"
+                      stroke-width="1.75"
+                      stroke-linejoin="round"
+                    />
+                    <path d="M8 7h8M8 11h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
                 </div>
               </div>
-              <p class="work-card__desc">
-                Learning platform with live classes, quizzes, progress tracking, and AI-assisted study hints.
-              </p>
-              <div class="stack" aria-label="Tech stack">
-                <span class="tag">React</span>
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">AI</span>
-              </div>
-              <div class="work-card__preview" aria-hidden="true">
-                <div class="mock mock--phone">
-                  <div class="mock__screen">
-                    <div class="mock__bar"></div>
-                    <div class="mock__content">
-                      <div class="ui ui--phone ui--learn">
-                        <div class="ui-top">
-                          <div class="ui-pill"></div>
-                          <div class="ui-chip"></div>
-                        </div>
-                        <div class="ui-progress">
-                          <div class="ui-bar"></div>
-                          <div class="ui-bar"></div>
-                          <div class="ui-bar"></div>
-                        </div>
-                        <div class="ui-cta"></div>
-                      </div>
-                    </div>
-                  </div>
+              <div class="work-card__body">
+                <p class="work-card__desc">
+                  Modern e-learning platform with live classes, quizzes, and progress tracking.
+                </p>
+                <div class="stack work-card__stack" aria-label="Tech stack">
+                  <span class="tag">React</span>
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JS</span>
+                  <span class="tag">Node.js</span>
+                  <span class="tag">AWS</span>
+                  <span class="tag">PostgreSQL</span>
                 </div>
-                <div class="mock mock--web">
-                  <div class="mock__screen">
-                    <div class="mock__bar"></div>
-                    <div class="mock__content">
-                      <div class="ui ui--web ui--learn">
-                        <div class="ui-hero"></div>
-                        <div class="ui-split">
-                          <div class="ui-panel"></div>
-                          <div class="ui-panel"></div>
-                        </div>
-                        <div class="ui-row">
-                          <div class="ui-stat"></div>
-                          <div class="ui-stat"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="work-card__platforms" aria-label="Platforms">
+                  <span class="platform-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" />
+                      <path d="M2 12h20" stroke="currentColor" stroke-width="1.5" />
+                    </svg>
+                    Web
+                  </span>
+                  <span class="platform-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <rect x="7" y="2" width="10" height="20" rx="2" stroke="currentColor" stroke-width="1.5" />
+                    </svg>
+                    Mobile Browser
+                  </span>
                 </div>
-              </div>
-              <div class="work-card__actions">
-                <button class="btn btn--sm btn--ghost" type="button" data-open-details>View Full Details</button>
-                <span class="muted hint">Click to expand</span>
+                <div class="work-card__actions">
+                  <button class="work-card__details" type="button" data-open-details>
+                    <span>View Full Details</span>
+                    <svg class="work-card__chev" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </article>
 
-            <article class="work-card" data-work-card data-project="shopflow" tabindex="0" role="button" aria-label="Open ShopFlow details">
-              <div class="work-card__top">
-                <span class="badge badge--pill">E-Commerce + AI</span>
-                <div class="work-card__title">
-                  <h3 class="h3">ShopFlow</h3>
-                  <p class="muted">Web + mobile marketplace</p>
+            <article
+              class="work-card work-card--shopflow"
+              data-work-card
+              data-project="shopflow"
+              tabindex="0"
+              role="button"
+              aria-label="Open ShopFlow details"
+            >
+              <div class="work-card__banner">
+                <div class="work-card__banner-text">
+                  <span class="work-card__cat">E-Commerce</span>
+                  <h3 class="work-card__name">ShopFlow</h3>
+                  <p class="work-card__sub">Web + Mobile App</p>
+                </div>
+                <div class="work-card__banner-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.75" />
+                    <path d="M2 12h20" stroke="currentColor" stroke-width="1.75" />
+                    <path d="M12 3a15 15 0 010 18M12 3a15 15 0 000 18" stroke="currentColor" stroke-width="1.75" />
+                  </svg>
                 </div>
               </div>
-              <p class="work-card__desc">
-                Multi-vendor marketplace with vendor dashboards, analytics, and AI-powered product search.
-              </p>
-              <div class="stack" aria-label="Tech stack">
-                <span class="tag">React</span>
-                <span class="tag">Java</span>
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">AI</span>
-              </div>
-              <div class="work-card__preview" aria-hidden="true">
-                <div class="mock mock--phone">
-                  <div class="mock__screen">
-                    <div class="mock__bar"></div>
-                    <div class="mock__content">
-                      <div class="ui ui--phone ui--shop">
-                        <div class="ui-top">
-                          <div class="ui-pill"></div>
-                          <div class="ui-chip"></div>
-                        </div>
-                        <div class="ui-cards">
-                          <div class="ui-card"></div>
-                          <div class="ui-card"></div>
-                          <div class="ui-card"></div>
-                        </div>
-                        <div class="ui-cta"></div>
-                      </div>
-                    </div>
-                  </div>
+              <div class="work-card__body">
+                <p class="work-card__desc">
+                  Enterprise-grade multi-vendor marketplace with analytics and vendor dashboards.
+                </p>
+                <div class="stack work-card__stack" aria-label="Tech stack">
+                  <span class="tag">React</span>
+                  <span class="tag">Java</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">Node.js</span>
+                  <span class="tag">AWS</span>
+                  <span class="tag">AZURE</span>
+                  <span class="tag">Expo</span>
                 </div>
-                <div class="mock mock--web">
-                  <div class="mock__screen">
-                    <div class="mock__bar"></div>
-                    <div class="mock__content">
-                      <div class="ui ui--web ui--shop">
-                        <div class="ui-hero"></div>
-                        <div class="ui-row">
-                          <div class="ui-stat"></div>
-                          <div class="ui-stat"></div>
-                          <div class="ui-stat"></div>
-                        </div>
-                        <div class="ui-chart"></div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="work-card__platforms" aria-label="Platforms">
+                  <span class="platform-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" />
+                      <path d="M2 12h20" stroke="currentColor" stroke-width="1.5" />
+                    </svg>
+                    Web
+                  </span>
+                  <span class="platform-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <rect x="7" y="2" width="10" height="20" rx="2" stroke="currentColor" stroke-width="1.5" />
+                    </svg>
+                    Android
+                  </span>
+                  <span class="platform-pill">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <rect x="7" y="2" width="10" height="20" rx="2" stroke="currentColor" stroke-width="1.5" />
+                    </svg>
+                    iOS
+                  </span>
                 </div>
-              </div>
-              <div class="work-card__actions">
-                <button class="btn btn--sm btn--ghost" type="button" data-open-details>View Full Details</button>
-                <span class="muted hint">Click to expand</span>
-              </div>
-            </article>
-
-            <article class="work-card" data-work-card data-project="coursepilot" tabindex="0" role="button" aria-label="Open CoursePilot details">
-              <div class="work-card__top">
-                <span class="badge badge--pill">Learning + AI</span>
-                <div class="work-card__title">
-                  <h3 class="h3">CoursePilot</h3>
-                  <p class="muted">Micro-courses &amp; cohorts</p>
+                <div class="work-card__actions">
+                  <button class="work-card__details" type="button" data-open-details>
+                    <span>View Full Details</span>
+                    <svg class="work-card__chev" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                  </button>
                 </div>
-              </div>
-              <p class="work-card__desc">
-                Cohort learning with modules, assessments, and AI-generated practice questions from your content.
-              </p>
-              <div class="stack" aria-label="Tech stack">
-                <span class="tag">React</span>
-                <span class="tag">Python</span>
-                <span class="tag">MongoDB</span>
-                <span class="tag">AI</span>
-              </div>
-              <div class="work-card__preview" aria-hidden="true">
-                <div class="mock mock--phone">
-                  <div class="mock__screen">
-                    <div class="mock__bar"></div>
-                    <div class="mock__content">
-                      <div class="ui ui--phone ui--course">
-                        <div class="ui-top">
-                          <div class="ui-pill"></div>
-                          <div class="ui-chip"></div>
-                        </div>
-                        <div class="ui-progress">
-                          <div class="ui-bar"></div>
-                          <div class="ui-bar"></div>
-                          <div class="ui-bar"></div>
-                        </div>
-                        <div class="ui-cta"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="mock mock--web">
-                  <div class="mock__screen">
-                    <div class="mock__bar"></div>
-                    <div class="mock__content">
-                      <div class="ui ui--web ui--course">
-                        <div class="ui-hero"></div>
-                        <div class="ui-split">
-                          <div class="ui-panel"></div>
-                          <div class="ui-panel"></div>
-                        </div>
-                        <div class="ui-grid">
-                          <div class="ui-tile"></div>
-                          <div class="ui-tile"></div>
-                          <div class="ui-tile"></div>
-                          <div class="ui-tile"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="work-card__actions">
-                <button class="btn btn--sm btn--ghost" type="button" data-open-details>View Full Details</button>
-                <span class="muted hint">Click to expand</span>
               </div>
             </article>
           </div>
@@ -494,23 +444,23 @@
           </div>
 
           <div class="grid grid--2">
-            <article class="card">
+            <article class="card" tabindex="0">
               <h3 class="h3">End-to-End Ownership</h3>
               <p>One team handles design, development, deployment, and maintenance — no handoffs, no blame-shifting.</p>
             </article>
-            <article class="card">
+            <article class="card" tabindex="0">
               <h3 class="h3">Fast Delivery</h3>
               <p>Agile sprints with weekly demos. You see progress every week, not after months of silence.</p>
             </article>
-            <article class="card">
+            <article class="card" tabindex="0">
               <h3 class="h3">Scalable Architecture</h3>
               <p>We build with growth in mind — microservices, cloud-native, and ready for 10x traffic from day one.</p>
             </article>
-            <article class="card">
+            <article class="card" tabindex="0">
               <h3 class="h3">Reliable Long-Term Support</h3>
               <p>Post-launch isn't the end — we offer ongoing SLAs, monitoring, and feature iterations.</p>
             </article>
-            <article class="card">
+            <article class="card" tabindex="0">
               <h3 class="h3">Cost-Effective Solutions</h3>
               <p>Startup-friendly pricing with enterprise quality. No bloated teams, no unnecessary overhead.</p>
             </article>
@@ -527,35 +477,35 @@
           </div>
 
           <ol class="steps">
-            <li class="step">
+            <li class="step" tabindex="0">
               <div class="step__num">1</div>
               <div class="step__body">
                 <h3 class="h3">Idea Discussion</h3>
                 <p>We start with a deep-dive call to understand your vision, goals, and constraints. No templates — just genuine listening.</p>
               </div>
             </li>
-            <li class="step">
+            <li class="step" tabindex="0">
               <div class="step__num">2</div>
               <div class="step__body">
                 <h3 class="h3">UI/UX Design</h3>
                 <p>Wireframes, prototypes, and high-fidelity designs reviewed together. You approve before a single line of code is written.</p>
               </div>
             </li>
-            <li class="step">
+            <li class="step" tabindex="0">
               <div class="step__num">3</div>
               <div class="step__body">
                 <h3 class="h3">Development</h3>
                 <p>Agile sprints with weekly demos. Full-stack engineering — frontend, backend, mobile, cloud — all under one roof.</p>
               </div>
             </li>
-            <li class="step">
+            <li class="step" tabindex="0">
               <div class="step__num">4</div>
               <div class="step__body">
                 <h3 class="h3">Deployment</h3>
                 <p>CI/CD pipelines, cloud infrastructure, App Store / Play Store submissions. Launched securely and reliably.</p>
               </div>
             </li>
-            <li class="step">
+            <li class="step" tabindex="0">
               <div class="step__num">5</div>
               <div class="step__body">
                 <h3 class="h3">Support &amp; Maintenance</h3>
@@ -575,6 +525,17 @@
               <p class="muted">
                 Whether you have a specific project in mind or just want to explore possibilities, our team is ready to listen.
               </p>
+
+              <ul class="team-list" aria-label="Team">
+                <li>
+                  <strong class="team-list__name">Harshitha J</strong>
+                  <span class="team-list__cred">B.E in CS</span>
+                </li>
+                <li>
+                  <strong class="team-list__name">Kushal J Gowda</strong>
+                  <span class="team-list__cred">B.E in AIML</span>
+                </li>
+              </ul>
 
               <div class="cta-cards">
                 <a class="mini-card mini-card--action" href="mailto:nxcodeify@gmail.com">
@@ -602,7 +563,7 @@
                   </span>
                   <span class="mini-card__text">
                     <span class="mini-card__label">Call Us</span>
-                    <span class="mini-card__value">+91 9535750752</span>
+                    <span class="mini-card__value">9535750752 or 9845242693</span>
                   </span>
                 </a>
                 <a
@@ -636,8 +597,15 @@
 
               <form class="form" id="leadForm" novalidate>
                 <div class="field">
-                  <label for="fullName">Full Name <span class="req">*</span></label>
-                  <input id="fullName" name="name" type="text" placeholder="Your full name" autocomplete="name" required />
+                  <label for="leadName">Full name <span class="req">*</span></label>
+                  <input
+                    id="leadName"
+                    name="name"
+                    type="text"
+                    placeholder="Your full name"
+                    autocomplete="name"
+                    required
+                  />
                   <small class="error" data-error-for="name"></small>
                 </div>
 
@@ -648,8 +616,8 @@
                 </div>
 
                 <div class="field">
-                  <label for="phone">Phone Number</label>
-                  <input id="phone" name="phone" type="tel" placeholder="+91 XXXXX XXXXX" autocomplete="tel" />
+                  <label for="phone">Phone Number <span class="req">*</span></label>
+                  <input id="phone" name="phone" type="tel" placeholder="+91 95357 50752" autocomplete="tel" required />
                   <small class="error" data-error-for="phone"></small>
                 </div>
 
@@ -696,13 +664,24 @@
               <p class="muted">
                 Whether you have a specific project in mind or just want to explore possibilities, our team is ready to listen.
               </p>
+              <ul class="team-list team-list--compact" aria-label="Team">
+                <li>
+                  <strong class="team-list__name">Harshitha J</strong>
+                  <span class="team-list__cred">B.E in CS</span>
+                </li>
+                <li>
+                  <strong class="team-list__name">Kushal J Gowda</strong>
+                  <span class="team-list__cred">B.E in AIML</span>
+                </li>
+              </ul>
               <p class="contact-follow">
                 <strong>Follow us for more updates</strong>
                 <span class="muted"> — see launches, tips, and behind-the-scenes on Instagram.</span>
               </p>
               <div class="contact-actions">
                 <a class="btn btn--primary" href="mailto:nxcodeify@gmail.com">Click to Email</a>
-                <a class="btn btn--ghost" href="tel:+919535750752">Click to Call</a>
+                <a class="btn btn--ghost" href="tel:+919535750752">Call 9535750752</a>
+                <a class="btn btn--ghost" href="tel:+919845242693">Call 9845242693</a>
                 <a
                   class="btn btn--ghost contact-actions__ig"
                   href="https://www.instagram.com/nxcodeify.tech/"
@@ -725,9 +704,13 @@
                 <span class="kv__k">Email</span>
                 <a class="kv__v kv__v--link" href="mailto:nxcodeify@gmail.com">nxcodeify@gmail.com</a>
               </div>
-              <div class="kv">
+              <div class="kv kv--phone-tight">
                 <span class="kv__k">Phone</span>
-                <a class="kv__v kv__v--link" href="tel:+919535750752">9535750752</a>
+                <span class="kv__v kv__v--phones">
+                  <a class="kv__v--link" href="tel:+919535750752">9535750752</a>
+                  <span class="kv__sep" aria-hidden="true">or</span>
+                  <a class="kv__v--link" href="tel:+919845242693">9845242693</a>
+                </span>
               </div>
               <div class="kv">
                 <span class="kv__k">Instagram</span>
@@ -751,7 +734,7 @@
           <div class="brand brand--footer">
             <img class="brand__logo" src="./assets/logo.png" alt="Nxcodify logo" />
             <span class="brand__text">
-              <span class="brand__name">Nxcodify</span>
+              <span class="brand__name"><span class="brand__nx">Nx</span><span class="brand__rest">codeify</span></span>
               <span class="brand__tagline">Where Ideas Go Live</span>
             </span>
           </div>
@@ -775,7 +758,7 @@
           <h3 class="h3 h3--sm">Contact Us</h3>
           <ul class="links">
             <li><a href="mailto:nxcodeify@gmail.com">nxcodeify@gmail.com</a></li>
-            <li><a href="tel:+919535750752">+91 9535750752</a></li>
+            <li><a href="tel:+919535750752">9535750752</a> · <a href="tel:+919845242693">9845242693</a></li>
             <li>
               <a href="https://www.instagram.com/nxcodeify.tech/" target="_blank" rel="noopener noreferrer"
                 >@nxcodeify.tech</a
@@ -800,8 +783,18 @@
         </div>
       </div>
       <div class="container footer__bottom">
-        <small class="muted">© <span id="year"></span> Nxcodify. All rights reserved.</small>
-        <small class="muted">Built with precision. Delivered with pride.</small>
+        <div class="footer__bottom-left">
+          <img
+            class="footer__ganesha"
+            src="./assets/ganesha.png"
+            width="28"
+            height="28"
+            alt=""
+            decoding="async"
+          />
+          <small class="footer__fineprint">© <span id="year"></span> Nxcodify. All rights reserved.</small>
+        </div>
+        <small class="footer__fineprint">Built with precision. Delivered with pride.</small>
       </div>
     </footer>
 
